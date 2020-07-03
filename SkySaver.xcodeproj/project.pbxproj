@@ -1,0 +1,902 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF5431F32460BD900085E08F /* SkySaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5431F22460BD900085E08F /* SkySaverView.swift */; };
+		EF5431F52460BDC60085E08F /* NightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5431F42460BDC60085E08F /* NightView.swift */; };
+		EF5431FD2460BF440085E08F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5431FC2460BF440085E08F /* AppDelegate.swift */; };
+		EF5432012460BF480085E08F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5432002460BF480085E08F /* Assets.xcassets */; };
+		EF5432042460BF480085E08F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF5432032460BF480085E08F /* Preview Assets.xcassets */; };
+		EF5432072460BF480085E08F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF5432052460BF480085E08F /* Main.storyboard */; };
+		EF5432132460BF480085E08F /* TransitionForecasterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5432122460BF480085E08F /* TransitionForecasterTests.swift */; };
+		EF54321E2460BF480085E08F /* StarsPreviewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54321D2460BF480085E08F /* StarsPreviewUITests.swift */; };
+		EF5432292460BF500085E08F /* SkySaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5431F22460BD900085E08F /* SkySaverView.swift */; };
+		EF54322A2460BF500085E08F /* NightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5431F42460BDC60085E08F /* NightView.swift */; };
+		EF54322C2460BF700085E08F /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54322B2460BF700085E08F /* PreviewViewController.swift */; };
+		EF54322E24632B020085E08F /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54322D24632B020085E08F /* DayView.swift */; };
+		EF54322F24632B020085E08F /* DayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF54322D24632B020085E08F /* DayView.swift */; };
+		EF77C9982467199300C0E8BB /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9972467199300C0E8BB /* Star.swift */; };
+		EF77C9992467199300C0E8BB /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9972467199300C0E8BB /* Star.swift */; };
+		EF77C99B246719CB00C0E8BB /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C99A246719CB00C0E8BB /* Cloud.swift */; };
+		EF77C99C246719CB00C0E8BB /* Cloud.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C99A246719CB00C0E8BB /* Cloud.swift */; };
+		EF77C99E246719E000C0E8BB /* CloudParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C99D246719E000C0E8BB /* CloudParticle.swift */; };
+		EF77C99F246719E000C0E8BB /* CloudParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C99D246719E000C0E8BB /* CloudParticle.swift */; };
+		EF77C9A124671DB300C0E8BB /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A024671DB300C0E8BB /* TransitionView.swift */; };
+		EF77C9A224671DB300C0E8BB /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A024671DB300C0E8BB /* TransitionView.swift */; };
+		EF77C9A424671E6C00C0E8BB /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A324671E6C00C0E8BB /* ColorHelper.swift */; };
+		EF77C9A524671E6C00C0E8BB /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A324671E6C00C0E8BB /* ColorHelper.swift */; };
+		EF77C9A72468640F00C0E8BB /* SkyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A62468640F00C0E8BB /* SkyCoordinator.swift */; };
+		EF77C9A82468640F00C0E8BB /* SkyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A62468640F00C0E8BB /* SkyCoordinator.swift */; };
+		EF77C9AA24686C4500C0E8BB /* NSView~animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A924686C4500C0E8BB /* NSView~animations.swift */; };
+		EF77C9AB24686C4500C0E8BB /* NSView~animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A924686C4500C0E8BB /* NSView~animations.swift */; };
+		EF77C9B024689F4600C0E8BB /* SkyMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9AF24689F4600C0E8BB /* SkyMode.swift */; };
+		EF77C9B124689F4600C0E8BB /* SkyMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9AF24689F4600C0E8BB /* SkyMode.swift */; };
+		EFA044BD248ADFB0007C9242 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044BC248ADFB0007C9242 /* LocationHelper.swift */; };
+		EFA044BE248ADFB0007C9242 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044BC248ADFB0007C9242 /* LocationHelper.swift */; };
+		EFA044C4248AE6B4007C9242 /* TransitionForecaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044C3248AE6B4007C9242 /* TransitionForecaster.swift */; };
+		EFA044C5248AE6B4007C9242 /* TransitionForecaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044C3248AE6B4007C9242 /* TransitionForecaster.swift */; };
+		EFA044C7248AFF50007C9242 /* Date~Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044C6248AFF50007C9242 /* Date~Helpers.swift */; };
+		EFA044C8248AFF50007C9242 /* Date~Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044C6248AFF50007C9242 /* Date~Helpers.swift */; };
+		EFA044CA248C3A43007C9242 /* DateExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044C9248C3A43007C9242 /* DateExtensionTests.swift */; };
+		EFA044CC248D7F3D007C9242 /* SolarTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044CB248D7F3D007C9242 /* SolarTests.swift */; };
+		EFA044CE248D7FA4007C9242 /* CityCoordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044CD248D7FA4007C9242 /* CityCoordinates.swift */; };
+		EFA044D0248D8355007C9242 /* Solar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044CF248D8355007C9242 /* Solar.swift */; };
+		EFA044D1248D8355007C9242 /* Solar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044CF248D8355007C9242 /* Solar.swift */; };
+		EFA044D3248D8999007C9242 /* Julian.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044D2248D8999007C9242 /* Julian.swift */; };
+		EFA044D4248D8999007C9242 /* Julian.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044D2248D8999007C9242 /* Julian.swift */; };
+		EFA044D6248D8A49007C9242 /* JulianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044D5248D8A49007C9242 /* JulianTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF54320F2460BF480085E08F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF5431DB2460BD560085E08F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF5431F92460BF440085E08F;
+			remoteInfo = StarsPreview;
+		};
+		EF54321A2460BF480085E08F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF5431DB2460BD560085E08F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF5431F92460BF440085E08F;
+			remoteInfo = StarsPreview;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF5431E42460BD560085E08F /* Sky.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sky.saver; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5431EB2460BD560085E08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF5431F22460BD900085E08F /* SkySaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkySaverView.swift; sourceTree = "<group>"; };
+		EF5431F42460BDC60085E08F /* NightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NightView.swift; sourceTree = "<group>"; };
+		EF5431FA2460BF440085E08F /* SkySaverPreview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkySaverPreview.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5431FC2460BF440085E08F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF5432002460BF480085E08F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF5432032460BF480085E08F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EF5432062460BF480085E08F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF5432082460BF480085E08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF5432092460BF480085E08F /* StarsPreview.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StarsPreview.entitlements; sourceTree = "<group>"; };
+		EF54320E2460BF480085E08F /* SkySaverPreviewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkySaverPreviewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF5432122460BF480085E08F /* TransitionForecasterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionForecasterTests.swift; sourceTree = "<group>"; };
+		EF5432142460BF480085E08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF5432192460BF480085E08F /* SkySaverPreviewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkySaverPreviewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF54321D2460BF480085E08F /* StarsPreviewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarsPreviewUITests.swift; sourceTree = "<group>"; };
+		EF54321F2460BF480085E08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF54322B2460BF700085E08F /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		EF54322D24632B020085E08F /* DayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayView.swift; sourceTree = "<group>"; };
+		EF77C9972467199300C0E8BB /* Star.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Star.swift; sourceTree = "<group>"; };
+		EF77C99A246719CB00C0E8BB /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
+		EF77C99D246719E000C0E8BB /* CloudParticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudParticle.swift; sourceTree = "<group>"; };
+		EF77C9A024671DB300C0E8BB /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
+		EF77C9A324671E6C00C0E8BB /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		EF77C9A62468640F00C0E8BB /* SkyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyCoordinator.swift; sourceTree = "<group>"; };
+		EF77C9A924686C4500C0E8BB /* NSView~animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView~animations.swift"; sourceTree = "<group>"; };
+		EF77C9AF24689F4600C0E8BB /* SkyMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyMode.swift; sourceTree = "<group>"; };
+		EF77C9BD246C578A00C0E8BB /* open_log.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = open_log.sh; sourceTree = "<group>"; };
+		EF77C9BE246C578A00C0E8BB /* notarize.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = notarize.sh; sourceTree = "<group>"; };
+		EFA044BC248ADFB0007C9242 /* LocationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
+		EFA044C3248AE6B4007C9242 /* TransitionForecaster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionForecaster.swift; sourceTree = "<group>"; };
+		EFA044C6248AFF50007C9242 /* Date~Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date~Helpers.swift"; sourceTree = "<group>"; };
+		EFA044C9248C3A43007C9242 /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
+		EFA044CB248D7F3D007C9242 /* SolarTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarTests.swift; sourceTree = "<group>"; };
+		EFA044CD248D7FA4007C9242 /* CityCoordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityCoordinates.swift; sourceTree = "<group>"; };
+		EFA044CF248D8355007C9242 /* Solar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solar.swift; sourceTree = "<group>"; };
+		EFA044D2248D8999007C9242 /* Julian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Julian.swift; sourceTree = "<group>"; };
+		EFA044D5248D8A49007C9242 /* JulianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JulianTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF5431E12460BD560085E08F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF5431F72460BF440085E08F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF54320B2460BF480085E08F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF5432162460BF480085E08F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF5431DA2460BD560085E08F = {
+			isa = PBXGroup;
+			children = (
+				EF77C9BC246C578A00C0E8BB /* bin */,
+				EF5431E62460BD560085E08F /* ScreenSaver */,
+				EF5431FB2460BF440085E08F /* StarsPreview */,
+				EF5432112460BF480085E08F /* StarsPreviewTests */,
+				EF54321C2460BF480085E08F /* StarsPreviewUITests */,
+				EF5431E52460BD560085E08F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF5431E52460BD560085E08F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF5431E42460BD560085E08F /* Sky.saver */,
+				EF5431FA2460BF440085E08F /* SkySaverPreview.app */,
+				EF54320E2460BF480085E08F /* SkySaverPreviewTests.xctest */,
+				EF5432192460BF480085E08F /* SkySaverPreviewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF5431E62460BD560085E08F /* ScreenSaver */ = {
+			isa = PBXGroup;
+			children = (
+				EF5431EB2460BD560085E08F /* Info.plist */,
+				EF5431F22460BD900085E08F /* SkySaverView.swift */,
+				EF77C9A62468640F00C0E8BB /* SkyCoordinator.swift */,
+				EF77C9AF24689F4600C0E8BB /* SkyMode.swift */,
+				EFA044C2248AE627007C9242 /* Sunrise Sunset */,
+				EF77C9BB246C50D600C0E8BB /* Extensions */,
+				EF77C9AC24689EA800C0E8BB /* Views */,
+				EF77C9A324671E6C00C0E8BB /* ColorHelper.swift */,
+			);
+			path = ScreenSaver;
+			sourceTree = "<group>";
+		};
+		EF5431FB2460BF440085E08F /* StarsPreview */ = {
+			isa = PBXGroup;
+			children = (
+				EF5431FC2460BF440085E08F /* AppDelegate.swift */,
+				EF54322B2460BF700085E08F /* PreviewViewController.swift */,
+				EF5432002460BF480085E08F /* Assets.xcassets */,
+				EF5432052460BF480085E08F /* Main.storyboard */,
+				EF5432082460BF480085E08F /* Info.plist */,
+				EF5432092460BF480085E08F /* StarsPreview.entitlements */,
+				EF5432022460BF480085E08F /* Preview Content */,
+			);
+			path = StarsPreview;
+			sourceTree = "<group>";
+		};
+		EF5432022460BF480085E08F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EF5432032460BF480085E08F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EF5432112460BF480085E08F /* StarsPreviewTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF5432122460BF480085E08F /* TransitionForecasterTests.swift */,
+				EFA044C9248C3A43007C9242 /* DateExtensionTests.swift */,
+				EFA044CB248D7F3D007C9242 /* SolarTests.swift */,
+				EFA044D5248D8A49007C9242 /* JulianTests.swift */,
+				EF5432142460BF480085E08F /* Info.plist */,
+				EFA044CD248D7FA4007C9242 /* CityCoordinates.swift */,
+			);
+			path = StarsPreviewTests;
+			sourceTree = "<group>";
+		};
+		EF54321C2460BF480085E08F /* StarsPreviewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF54321D2460BF480085E08F /* StarsPreviewUITests.swift */,
+				EF54321F2460BF480085E08F /* Info.plist */,
+			);
+			path = StarsPreviewUITests;
+			sourceTree = "<group>";
+		};
+		EF77C9AC24689EA800C0E8BB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EF77C9AD24689EB300C0E8BB /* Night */,
+				EF77C9AE24689EBB00C0E8BB /* Day */,
+				EF77C9A024671DB300C0E8BB /* TransitionView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EF77C9AD24689EB300C0E8BB /* Night */ = {
+			isa = PBXGroup;
+			children = (
+				EF5431F42460BDC60085E08F /* NightView.swift */,
+				EF77C9972467199300C0E8BB /* Star.swift */,
+			);
+			path = Night;
+			sourceTree = "<group>";
+		};
+		EF77C9AE24689EBB00C0E8BB /* Day */ = {
+			isa = PBXGroup;
+			children = (
+				EF54322D24632B020085E08F /* DayView.swift */,
+				EF77C99A246719CB00C0E8BB /* Cloud.swift */,
+				EF77C99D246719E000C0E8BB /* CloudParticle.swift */,
+			);
+			path = Day;
+			sourceTree = "<group>";
+		};
+		EF77C9BB246C50D600C0E8BB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EFA044C6248AFF50007C9242 /* Date~Helpers.swift */,
+				EF77C9A924686C4500C0E8BB /* NSView~animations.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EF77C9BC246C578A00C0E8BB /* bin */ = {
+			isa = PBXGroup;
+			children = (
+				EF77C9BD246C578A00C0E8BB /* open_log.sh */,
+				EF77C9BE246C578A00C0E8BB /* notarize.sh */,
+			);
+			path = bin;
+			sourceTree = "<group>";
+		};
+		EFA044C2248AE627007C9242 /* Sunrise Sunset */ = {
+			isa = PBXGroup;
+			children = (
+				EFA044C3248AE6B4007C9242 /* TransitionForecaster.swift */,
+				EFA044BC248ADFB0007C9242 /* LocationHelper.swift */,
+				EFA044CF248D8355007C9242 /* Solar.swift */,
+				EFA044D2248D8999007C9242 /* Julian.swift */,
+			);
+			path = "Sunrise Sunset";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EF5431DF2460BD560085E08F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EF5431E32460BD560085E08F /* Sky */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5431EE2460BD560085E08F /* Build configuration list for PBXNativeTarget "Sky" */;
+			buildPhases = (
+				EF5431DF2460BD560085E08F /* Headers */,
+				EF5431E02460BD560085E08F /* Sources */,
+				EF5431E12460BD560085E08F /* Frameworks */,
+				EF5431E22460BD560085E08F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sky;
+			productName = Stars;
+			productReference = EF5431E42460BD560085E08F /* Sky.saver */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EF5431F92460BF440085E08F /* SkySaverPreview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5432202460BF480085E08F /* Build configuration list for PBXNativeTarget "SkySaverPreview" */;
+			buildPhases = (
+				EF5431F62460BF440085E08F /* Sources */,
+				EF5431F72460BF440085E08F /* Frameworks */,
+				EF5431F82460BF440085E08F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkySaverPreview;
+			productName = StarsPreview;
+			productReference = EF5431FA2460BF440085E08F /* SkySaverPreview.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF54320D2460BF480085E08F /* SkySaverPreviewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5432232460BF480085E08F /* Build configuration list for PBXNativeTarget "SkySaverPreviewTests" */;
+			buildPhases = (
+				EF54320A2460BF480085E08F /* Sources */,
+				EF54320B2460BF480085E08F /* Frameworks */,
+				EF54320C2460BF480085E08F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF5432102460BF480085E08F /* PBXTargetDependency */,
+			);
+			name = SkySaverPreviewTests;
+			productName = StarsPreviewTests;
+			productReference = EF54320E2460BF480085E08F /* SkySaverPreviewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF5432182460BF480085E08F /* SkySaverPreviewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF5432262460BF480085E08F /* Build configuration list for PBXNativeTarget "SkySaverPreviewUITests" */;
+			buildPhases = (
+				EF5432152460BF480085E08F /* Sources */,
+				EF5432162460BF480085E08F /* Frameworks */,
+				EF5432172460BF480085E08F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF54321B2460BF480085E08F /* PBXTargetDependency */,
+			);
+			name = SkySaverPreviewUITests;
+			productName = StarsPreviewUITests;
+			productReference = EF5432192460BF480085E08F /* SkySaverPreviewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF5431DB2460BD560085E08F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Robert Tolar Haining";
+				TargetAttributes = {
+					EF5431E32460BD560085E08F = {
+						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
+					};
+					EF5431F92460BF440085E08F = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					EF54320D2460BF480085E08F = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = EF5431F92460BF440085E08F;
+					};
+					EF5432182460BF480085E08F = {
+						CreatedOnToolsVersion = 11.4.1;
+						TestTargetID = EF5431F92460BF440085E08F;
+					};
+				};
+			};
+			buildConfigurationList = EF5431DE2460BD560085E08F /* Build configuration list for PBXProject "SkySaver" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF5431DA2460BD560085E08F;
+			productRefGroup = EF5431E52460BD560085E08F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF5431E32460BD560085E08F /* Sky */,
+				EF5431F92460BF440085E08F /* SkySaverPreview */,
+				EF54320D2460BF480085E08F /* SkySaverPreviewTests */,
+				EF5432182460BF480085E08F /* SkySaverPreviewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF5431E22460BD560085E08F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF5431F82460BF440085E08F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5432072460BF480085E08F /* Main.storyboard in Resources */,
+				EF5432042460BF480085E08F /* Preview Assets.xcassets in Resources */,
+				EF5432012460BF480085E08F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF54320C2460BF480085E08F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF5432172460BF480085E08F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF5431E02460BD560085E08F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF77C9B024689F4600C0E8BB /* SkyMode.swift in Sources */,
+				EF5431F32460BD900085E08F /* SkySaverView.swift in Sources */,
+				EF77C99B246719CB00C0E8BB /* Cloud.swift in Sources */,
+				EF54322E24632B020085E08F /* DayView.swift in Sources */,
+				EF77C9A424671E6C00C0E8BB /* ColorHelper.swift in Sources */,
+				EF77C9A124671DB300C0E8BB /* TransitionView.swift in Sources */,
+				EF77C9AA24686C4500C0E8BB /* NSView~animations.swift in Sources */,
+				EF5431F52460BDC60085E08F /* NightView.swift in Sources */,
+				EFA044C7248AFF50007C9242 /* Date~Helpers.swift in Sources */,
+				EFA044D3248D8999007C9242 /* Julian.swift in Sources */,
+				EF77C9982467199300C0E8BB /* Star.swift in Sources */,
+				EF77C9A72468640F00C0E8BB /* SkyCoordinator.swift in Sources */,
+				EF77C99E246719E000C0E8BB /* CloudParticle.swift in Sources */,
+				EFA044BD248ADFB0007C9242 /* LocationHelper.swift in Sources */,
+				EFA044D0248D8355007C9242 /* Solar.swift in Sources */,
+				EFA044C4248AE6B4007C9242 /* TransitionForecaster.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF5431F62460BF440085E08F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5432292460BF500085E08F /* SkySaverView.swift in Sources */,
+				EF77C9A524671E6C00C0E8BB /* ColorHelper.swift in Sources */,
+				EF77C99F246719E000C0E8BB /* CloudParticle.swift in Sources */,
+				EF77C9AB24686C4500C0E8BB /* NSView~animations.swift in Sources */,
+				EF54322A2460BF500085E08F /* NightView.swift in Sources */,
+				EFA044D1248D8355007C9242 /* Solar.swift in Sources */,
+				EF5431FD2460BF440085E08F /* AppDelegate.swift in Sources */,
+				EF77C9992467199300C0E8BB /* Star.swift in Sources */,
+				EFA044C5248AE6B4007C9242 /* TransitionForecaster.swift in Sources */,
+				EFA044D4248D8999007C9242 /* Julian.swift in Sources */,
+				EFA044BE248ADFB0007C9242 /* LocationHelper.swift in Sources */,
+				EF77C9A224671DB300C0E8BB /* TransitionView.swift in Sources */,
+				EF77C9B124689F4600C0E8BB /* SkyMode.swift in Sources */,
+				EFA044C8248AFF50007C9242 /* Date~Helpers.swift in Sources */,
+				EF77C9A82468640F00C0E8BB /* SkyCoordinator.swift in Sources */,
+				EF77C99C246719CB00C0E8BB /* Cloud.swift in Sources */,
+				EF54322F24632B020085E08F /* DayView.swift in Sources */,
+				EF54322C2460BF700085E08F /* PreviewViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF54320A2460BF480085E08F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF5432132460BF480085E08F /* TransitionForecasterTests.swift in Sources */,
+				EFA044D6248D8A49007C9242 /* JulianTests.swift in Sources */,
+				EFA044CE248D7FA4007C9242 /* CityCoordinates.swift in Sources */,
+				EFA044CC248D7F3D007C9242 /* SolarTests.swift in Sources */,
+				EFA044CA248C3A43007C9242 /* DateExtensionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF5432152460BF480085E08F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF54321E2460BF480085E08F /* StarsPreviewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF5432102460BF480085E08F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF5431F92460BF440085E08F /* SkySaverPreview */;
+			targetProxy = EF54320F2460BF480085E08F /* PBXContainerItemProxy */;
+		};
+		EF54321B2460BF480085E08F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF5431F92460BF440085E08F /* SkySaverPreview */;
+			targetProxy = EF54321A2460BF480085E08F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF5432052460BF480085E08F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF5432062460BF480085E08F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF5431EC2460BD560085E08F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EF5431ED2460BD560085E08F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EF5431EF2460BD560085E08F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3RF4ZJHWHU;
+				INFOPLIST_FILE = ScreenSaver/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.tolar.SkySaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Debug;
+		};
+		EF5431F02460BD560085E08F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3RF4ZJHWHU;
+				INFOPLIST_FILE = ScreenSaver/Info.plist;
+				INSTALL_PATH = "$(HOME)/Library/Screen Savers";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.tolar.SkySaver;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 5.0;
+				WRAPPER_EXTENSION = saver;
+			};
+			name = Release;
+		};
+		EF5432212460BF480085E08F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StarsPreview/StarsPreview.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"StarsPreview/Preview Content\"";
+				DEVELOPMENT_TEAM = 3RF4ZJHWHU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = StarsPreview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = co.tolar.StarsPreview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		EF5432222460BF480085E08F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = StarsPreview/StarsPreview.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"StarsPreview/Preview Content\"";
+				DEVELOPMENT_TEAM = 3RF4ZJHWHU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = StarsPreview/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = co.tolar.StarsPreview;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		EF5432242460BF480085E08F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3RF4ZJHWHU;
+				INFOPLIST_FILE = StarsPreviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = co.tolar.StarsPreviewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkySaverPreview.app/Contents/MacOS/SkySaverPreview";
+			};
+			name = Debug;
+		};
+		EF5432252460BF480085E08F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3RF4ZJHWHU;
+				INFOPLIST_FILE = StarsPreviewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = co.tolar.StarsPreviewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkySaverPreview.app/Contents/MacOS/SkySaverPreview";
+			};
+			name = Release;
+		};
+		EF5432272460BF480085E08F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3RF4ZJHWHU;
+				INFOPLIST_FILE = StarsPreviewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.tolar.StarsPreviewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = StarsPreview;
+			};
+			name = Debug;
+		};
+		EF5432282460BF480085E08F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 3RF4ZJHWHU;
+				INFOPLIST_FILE = StarsPreviewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = co.tolar.StarsPreviewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = StarsPreview;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF5431DE2460BD560085E08F /* Build configuration list for PBXProject "SkySaver" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5431EC2460BD560085E08F /* Debug */,
+				EF5431ED2460BD560085E08F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5431EE2460BD560085E08F /* Build configuration list for PBXNativeTarget "Sky" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5431EF2460BD560085E08F /* Debug */,
+				EF5431F02460BD560085E08F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5432202460BF480085E08F /* Build configuration list for PBXNativeTarget "SkySaverPreview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5432212460BF480085E08F /* Debug */,
+				EF5432222460BF480085E08F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5432232460BF480085E08F /* Build configuration list for PBXNativeTarget "SkySaverPreviewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5432242460BF480085E08F /* Debug */,
+				EF5432252460BF480085E08F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF5432262460BF480085E08F /* Build configuration list for PBXNativeTarget "SkySaverPreviewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF5432272460BF480085E08F /* Debug */,
+				EF5432282460BF480085E08F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF5431DB2460BD560085E08F /* Project object */;
+}

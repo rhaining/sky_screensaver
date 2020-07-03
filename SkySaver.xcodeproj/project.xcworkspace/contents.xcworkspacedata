@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Stars.xcodeproj">
+      location = "self:/Users/tolar/Developer/workspace/Stars/SkySaver.xcodeproj">
    </FileRef>
 </Workspace>
