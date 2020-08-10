@@ -50,6 +50,8 @@
 		EFA044D3248D8999007C9242 /* Julian.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044D2248D8999007C9242 /* Julian.swift */; };
 		EFA044D4248D8999007C9242 /* Julian.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044D2248D8999007C9242 /* Julian.swift */; };
 		EFA044D6248D8A49007C9242 /* JulianTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFA044D5248D8A49007C9242 /* JulianTests.swift */; };
+		EFDC925B24B8EFCD001934BF /* thumbnail.png in Resources */ = {isa = PBXBuildFile; fileRef = EFDC925924B8EFCD001934BF /* thumbnail.png */; };
+		EFDC925C24B8EFCD001934BF /* thumbnail@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EFDC925A24B8EFCD001934BF /* thumbnail@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -108,6 +110,8 @@
 		EFA044CF248D8355007C9242 /* Solar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solar.swift; sourceTree = "<group>"; };
 		EFA044D2248D8999007C9242 /* Julian.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Julian.swift; sourceTree = "<group>"; };
 		EFA044D5248D8A49007C9242 /* JulianTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JulianTests.swift; sourceTree = "<group>"; };
+		EFDC925924B8EFCD001934BF /* thumbnail.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thumbnail.png; sourceTree = "<group>"; };
+		EFDC925A24B8EFCD001934BF /* thumbnail@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thumbnail@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 		EF5431DA2460BD560085E08F = {
 			isa = PBXGroup;
 			children = (
+				EFDC925924B8EFCD001934BF /* thumbnail.png */,
+				EFDC925A24B8EFCD001934BF /* thumbnail@2x.png */,
 				EF77C9BC246C578A00C0E8BB /* bin */,
 				EF5431E62460BD560085E08F /* ScreenSaver */,
 				EF5431FB2460BF440085E08F /* StarsPreview */,
@@ -419,6 +425,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFDC925B24B8EFCD001934BF /* thumbnail.png in Resources */,
+				EFDC925C24B8EFCD001934BF /* thumbnail@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -669,7 +677,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = co.tolar.SkySaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -696,7 +704,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = co.tolar.SkySaver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
