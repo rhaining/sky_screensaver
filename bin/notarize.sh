@@ -33,7 +33,7 @@ echo "/usr/bin/ditto -c -k --sequesterRsrc --keepParent \"$EXPORT_SCREENSAVER_PA
 
 echo "\n\n" >> $LOG_PATH
 
-echo "/usr/bin/xcrun altool -t osx -f \"$ZIP_PATH\" --primary-bundle-id  $PRODUCT_BUNDLE_IDENTIFIER --notarize-app --username \"$APPLE_USERNAME\" -p \"@keychain:AC_PASSWORD\"" >> $LOG_PATH
+echo "/usr/bin/xcrun altool -t osx -f \"$ZIP_PATH\" --primary-bundle-id  $PRODUCT_BUNDLE_IDENTIFIER --notarize-app --username \"$APPLE_USERNAME\" -p \"@keychain:AC_PASSWORD\" --asc-provider $APPLE_PROVIDER" >> $LOG_PATH
 NOTARIZE_OUTPUT=`/usr/bin/xcrun altool -t osx -f "$ZIP_PATH" --primary-bundle-id  $PRODUCT_BUNDLE_IDENTIFIER --notarize-app --username "$APPLE_USERNAME" -p "@keychain:AC_PASSWORD" --asc-provider $APPLE_PROVIDER`
 echo $NOTARIZE_OUTPUT >> $LOG_PATH
 
@@ -48,8 +48,8 @@ then
 
   while [ TRUE ]
   do
-    echo "/usr/bin/xcrun altool --notarization-info $REQUEST_UUID --username \"$APPLE_USERNAME\" -p \"@keychain:AC_PASSWORD\"" >> $LOG_PATH
-    NOTARIZATION_INFO=`/usr/bin/xcrun altool --notarization-info $REQUEST_UUID --username "$APPLE_USERNAME" -p "@keychain:AC_PASSWORD"`
+    echo "/usr/bin/xcrun altool --notarization-info $REQUEST_UUID --username \"$APPLE_USERNAME\" -p \"@keychain:AC_PASSWORD\" --asc-provider $APPLE_PROVIDER" >> $LOG_PATH
+    NOTARIZATION_INFO=`/usr/bin/xcrun altool --notarization-info $REQUEST_UUID --username "$APPLE_USERNAME" -p "@keychain:AC_PASSWORD" --asc-provider $APPLE_PROVIDER`
     echo "$NOTARIZATION_INFO\n\n" >> $LOG_PATH
 
     if [[ $NOTARIZATION_INFO =~ "Status Message: Package Approved" ]]
