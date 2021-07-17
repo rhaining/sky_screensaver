@@ -9,14 +9,14 @@
 import AppKit
 
 final class NightView: NSView {
-    struct Constants {
+    private struct Constants {
         static let numberOfStars = 800
         static let minSize: CGFloat = 1
         static let maxSize: CGFloat = 4
         static let padding: CGFloat = 100
     }
     
-    let stars: [Star] = {
+    private let stars: [Star] = {
         var stars: [Star] = []
         for _ in 0..<Constants.numberOfStars {
             stars.append(Star())
@@ -32,7 +32,7 @@ final class NightView: NSView {
             layer?.addSublayer(s)
         }
         
-        layer?.backgroundColor = ColorHelper.nighttime
+        layer?.backgroundColor = CGColor.nighttime
     }
     
     required init?(coder: NSCoder) {
@@ -43,6 +43,7 @@ final class NightView: NSView {
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
+        // place each star in a random spot with a random size
         for s in stars {
             var frame = NSRect.zero
             frame.size.width = CGFloat.random(in: Constants.minSize..<Constants.maxSize)
@@ -54,11 +55,12 @@ final class NightView: NSView {
     }
 }
 
-extension NightView: SkyView {
+extension NightView: AnimatableView {
     func animateOneFrame() {
         stars.forEach { (s) in
             var frame = s.frame
 
+            // randomly increase/decrease its size a bit, to generate a twinkling effect
             if CGFloat.random(in: 0..<1) < 0.4 {
                 let expand = Bool.random()
                 let delta: CGFloat
@@ -74,6 +76,7 @@ extension NightView: SkyView {
                 }
             }
             
+            // shift it a tiny random amount to the left
             frame.origin.x -= s.starspeed
             if frame.origin.x + frame.size.width < 0 {
                 s.isHidden = true

@@ -10,15 +10,10 @@ import XCTest
 @testable import SkySaverPreview
 import CoreLocation
 
+// let's see if our algorithm is calculating the appropriate sunrise/sunset
+// for these cities.
+
 class SolarTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
     
     let dateFormatter: DateFormatter = {
         let df = DateFormatter()

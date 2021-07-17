@@ -9,6 +9,8 @@
 import XCTest
 @testable import SkySaverPreview
 
+//This julian calendar is a little new to me. is it working right? yep!
+
 class JulianTests: XCTestCase {
     
     let dateFormatter: DateFormatter = {
@@ -17,14 +19,6 @@ class JulianTests: XCTestCase {
         df.timeStyle = .long
         return df
     }()
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
 
     func testDaysSinceY2K() throws {
         let days = Julian.daysSinceY2KNoon(for: Date(timeIntervalSinceReferenceDate: 0))

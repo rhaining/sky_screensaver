@@ -9,12 +9,14 @@
 import AppKit
 
 final class DayView: NSView {
-    struct Constants {
+    private struct Constants {
         static let numberOfClouds = 25
         static let padding: CGFloat = 100
     }
 
-    let clouds: [Cloud] = {
+    // let's give our clouds a random size
+    // + don't worry about placement quite yet
+    private let clouds: [Cloud] = {
         var clouds: [Cloud] = []
         for _ in 0..<Constants.numberOfClouds {
             let width = round(CGFloat.random(in: 150..<350))
@@ -28,7 +30,7 @@ final class DayView: NSView {
         super.init(frame: .zero)
         
         wantsLayer = true
-        layer?.backgroundColor = ColorHelper.daytime
+        layer?.backgroundColor = CGColor.daytime
 
         for c in clouds {
             layer?.addSublayer(c)
@@ -39,9 +41,11 @@ final class DayView: NSView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     override func draw(_ dirtyRect: NSRect) {
         super.draw(dirtyRect)
         
+        // starts our clouds at random points on the screen
         for c in clouds {
             var frame = c.frame
             frame.origin.x = CGFloat.random(in: -Constants.padding..<dirtyRect.size.width+Constants.padding)
@@ -51,12 +55,14 @@ final class DayView: NSView {
     }
 }
 
-extension DayView: SkyView {
+extension DayView: AnimatableView {
     func animateOneFrame() {
         clouds.forEach { (c) in
             var frame = c.frame
+            //cloud floats to the left
             frame.origin.x -= c.cloudspeed
             
+            // if the cloud's offscreen, let's reset its 'x' to the right & randomize the 'y'
             if frame.maxX < 0 {
                 c.isHidden = true
                 frame.origin.x = bounds.size.width + Constants.padding

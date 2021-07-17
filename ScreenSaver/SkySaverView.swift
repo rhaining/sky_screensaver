@@ -9,8 +9,8 @@
 import Foundation
 import ScreenSaver
 
-class SkySaverView: ScreenSaverView{
-    let skyCoordinator = SkyCoordinator()
+final class SkySaverView: ScreenSaverView{
+    private let skyCoordinator = SkyCoordinator()
 
     override init?(frame: CGRect, isPreview: Bool) {
         super.init(frame: frame, isPreview: isPreview)
