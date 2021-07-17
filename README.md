@@ -1,4 +1,4 @@
-# Sky Screensaver
+# <img src="https://kindofawesome.com/screensaver/sky/assets/logo.png" width=30/> Sky Screensaver
 
 A Mac screensaver that simulates a sky. It uses your computer's location and date to calculate the sunrise & sunset. During the day, you'll see a beautiful blue sky with light, fluffy clouds floating by.  At night, a deep, dark sky will take over with twinkling stars brightening your evening. Around sunrise & sunset, you'll see a gorgeous transition that abstractly simulates gradients of colors that you might see on your own during these times of day.
 
