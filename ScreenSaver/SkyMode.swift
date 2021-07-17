@@ -9,6 +9,8 @@
 import Foundation
 import AppKit
 
+// Enumerates the various modes of the sky
+
 enum SkyMode: CaseIterable {
     case sunrise, day, sunset, night
         

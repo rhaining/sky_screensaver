@@ -10,6 +10,8 @@ import XCTest
 @testable import SkySaverPreview
 import CoreLocation
 
+// let's see if our forecaster is calculating the next transition correctly
+
 class TransitionForecasterTests: XCTestCase {
 
     override func setUpWithError() throws {

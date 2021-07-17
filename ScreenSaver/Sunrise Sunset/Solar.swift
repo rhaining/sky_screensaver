@@ -6,6 +6,11 @@
 //  Copyright © 2020 Robert Tolar Haining. All rights reserved.
 //
 
+
+/// adapted from the sunrise equation
+///    https://en.wikipedia.org/wiki/Sunrise_equation
+
+
 import Foundation
 import CoreLocation
 
@@ -16,14 +21,13 @@ final class Solar {
     let date: Date
     let coordinate: CLLocationCoordinate2D
     
-    //fixme: optinoal
     init?(for date: Date, coordinate: CLLocationCoordinate2D) {
         self.date = date
         self.coordinate = coordinate
         calculate()
     }
     
-    func calculate() {
+    func calculate() {        
         let lw = coordinate.longitude
         let Φ = coordinate.latitude
         
@@ -37,9 +41,9 @@ final class Solar {
         let M = (357.5291 + 0.98560028 * jStar).truncatingRemainder(dividingBy: 360.0)
         
         //C is the Equation of the center value needed to calculate lambda (see next equation).
-        let C1 = 1.9148 * sinDegrees(M)
-        let C2 = 0.0200 * sinDegrees(2*M)
-        let C3 = 0.0003 * sinDegrees(3*M)
+        let C1 = 1.9148 * Trigonometry.sinDegrees(M)
+        let C2 = 0.0200 * Trigonometry.sinDegrees(2*M)
+        let C3 = 0.0003 * Trigonometry.sinDegrees(3*M)
         let C = C1 + C2 + C3
         
         //    λ is the ecliptic longitude.
@@ -48,17 +52,18 @@ final class Solar {
         // Jtransit is the Julian date for the local true solar transit (or solar noon).
         let jTransit = 2451545.0
                         + jStar
-                        + (0.0053 * sinDegrees(M))
-                        - (0.0069 * sinDegrees(2 * λ))
+                        + (0.0053 * Trigonometry.sinDegrees(M))
+                        - (0.0069 * Trigonometry.sinDegrees(2 * λ))
         
         //declination of sun
-        let δ = asinDegrees( sinDegrees(λ) * sinDegrees(23.44) )
+        let δ = Trigonometry.asinDegrees( Trigonometry.sinDegrees(λ) * Trigonometry.sinDegrees(23.44) )
         
         //hour angle
         // -0.83
-        let coswoNumerator = sinDegrees(-0.83) - (sinDegrees(Φ) * sinDegrees(δ))
-        let coswoDenominator = cosDegrees(Φ) * cosDegrees(δ)
-        let wo = acosDegrees( coswoNumerator / coswoDenominator )
+        let coswoNumerator = Trigonometry.sinDegrees(-0.83)
+                            - (Trigonometry.sinDegrees(Φ) * Trigonometry.sinDegrees(δ))
+        let coswoDenominator = Trigonometry.cosDegrees(Φ) * Trigonometry.cosDegrees(δ)
+        let wo = Trigonometry.acosDegrees( coswoNumerator / coswoDenominator )
         
         //sunrise
         let jRise = jTransit - (wo / 360.0)
@@ -70,10 +75,10 @@ final class Solar {
         self.sunset = Julian.dateForJulianDays(julianDays: jSet)
     }
 }
+
 extension Solar {
     
     /// Whether the location specified by the `latitude` and `longitude` is in daytime on `date`
-    /// - Complexity: O(1)
     public var isDaytime: Bool {
         guard
             let sunrise = sunrise,
@@ -93,36 +98,9 @@ extension Solar {
     }
     
     /// Whether the location specified by the `latitude` and `longitude` is in nighttime on `date`
-    /// - Complexity: O(1)
     public var isNighttime: Bool {
         return !isDaytime
     }
-    
 }
 
 
-
-func sinDegrees(_ degrees: Double) -> Double {
-    return sin(degrees.degreesToRadians)
-}
-func asinDegrees(_ degrees: Double) -> Double {
-    return asin(degrees).radiansToDegrees
-}
-func cosDegrees(_ degrees: Double) -> Double {
-    return cos(degrees.degreesToRadians)
-}
-func acosDegrees(_ degrees: Double) -> Double {
-    return acos(degrees).radiansToDegrees
-}
-
-// MARK: - Helper extensions
-//
-private extension Double {
-    var degreesToRadians: Double {
-        return Double(self) * (Double.pi / 180.0)
-    }
-    
-    var radiansToDegrees: Double {
-        return (Double(self) * 180.0) / Double.pi
-    }
-}

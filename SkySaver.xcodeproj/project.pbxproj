@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF38B23026A370B60035881D /* AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38B22F26A370B60035881D /* AnimatableView.swift */; };
+		EF38B23126A370B60035881D /* AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38B22F26A370B60035881D /* AnimatableView.swift */; };
+		EF38B23326A370D50035881D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38B23226A370D50035881D /* Transition.swift */; };
+		EF38B23426A370D50035881D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38B23226A370D50035881D /* Transition.swift */; };
+		EF38B23626A374F50035881D /* Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38B23526A374F50035881D /* Trigonometry.swift */; };
+		EF38B23726A374F50035881D /* Trigonometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF38B23526A374F50035881D /* Trigonometry.swift */; };
 		EF5431F32460BD900085E08F /* SkySaverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5431F22460BD900085E08F /* SkySaverView.swift */; };
 		EF5431F52460BDC60085E08F /* NightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5431F42460BDC60085E08F /* NightView.swift */; };
 		EF5431FD2460BF440085E08F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF5431FC2460BF440085E08F /* AppDelegate.swift */; };
@@ -28,8 +34,8 @@
 		EF77C99F246719E000C0E8BB /* CloudParticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C99D246719E000C0E8BB /* CloudParticle.swift */; };
 		EF77C9A124671DB300C0E8BB /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A024671DB300C0E8BB /* TransitionView.swift */; };
 		EF77C9A224671DB300C0E8BB /* TransitionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A024671DB300C0E8BB /* TransitionView.swift */; };
-		EF77C9A424671E6C00C0E8BB /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A324671E6C00C0E8BB /* ColorHelper.swift */; };
-		EF77C9A524671E6C00C0E8BB /* ColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A324671E6C00C0E8BB /* ColorHelper.swift */; };
+		EF77C9A424671E6C00C0E8BB /* CGColor~Sky.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A324671E6C00C0E8BB /* CGColor~Sky.swift */; };
+		EF77C9A524671E6C00C0E8BB /* CGColor~Sky.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A324671E6C00C0E8BB /* CGColor~Sky.swift */; };
 		EF77C9A72468640F00C0E8BB /* SkyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A62468640F00C0E8BB /* SkyCoordinator.swift */; };
 		EF77C9A82468640F00C0E8BB /* SkyCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A62468640F00C0E8BB /* SkyCoordinator.swift */; };
 		EF77C9AA24686C4500C0E8BB /* NSView~animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF77C9A924686C4500C0E8BB /* NSView~animations.swift */; };
@@ -72,6 +78,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF38B22F26A370B60035881D /* AnimatableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableView.swift; sourceTree = "<group>"; };
+		EF38B23226A370D50035881D /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		EF38B23526A374F50035881D /* Trigonometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trigonometry.swift; sourceTree = "<group>"; };
 		EF5431E42460BD560085E08F /* Sky.saver */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sky.saver; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF5431EB2460BD560085E08F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF5431F22460BD900085E08F /* SkySaverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkySaverView.swift; sourceTree = "<group>"; };
@@ -95,7 +104,7 @@
 		EF77C99A246719CB00C0E8BB /* Cloud.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cloud.swift; sourceTree = "<group>"; };
 		EF77C99D246719E000C0E8BB /* CloudParticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudParticle.swift; sourceTree = "<group>"; };
 		EF77C9A024671DB300C0E8BB /* TransitionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransitionView.swift; sourceTree = "<group>"; };
-		EF77C9A324671E6C00C0E8BB /* ColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelper.swift; sourceTree = "<group>"; };
+		EF77C9A324671E6C00C0E8BB /* CGColor~Sky.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor~Sky.swift"; sourceTree = "<group>"; };
 		EF77C9A62468640F00C0E8BB /* SkyCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyCoordinator.swift; sourceTree = "<group>"; };
 		EF77C9A924686C4500C0E8BB /* NSView~animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSView~animations.swift"; sourceTree = "<group>"; };
 		EF77C9AF24689F4600C0E8BB /* SkyMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkyMode.swift; sourceTree = "<group>"; };
@@ -146,11 +155,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EF5431DA2460BD560085E08F = {
+		EF38B22E26A36EEC0035881D /* icon */ = {
 			isa = PBXGroup;
 			children = (
 				EFDC925924B8EFCD001934BF /* thumbnail.png */,
 				EFDC925A24B8EFCD001934BF /* thumbnail@2x.png */,
+			);
+			name = icon;
+			sourceTree = "<group>";
+		};
+		EF5431DA2460BD560085E08F = {
+			isa = PBXGroup;
+			children = (
+				EF38B22E26A36EEC0035881D /* icon */,
 				EF77C9BC246C578A00C0E8BB /* bin */,
 				EF5431E62460BD560085E08F /* ScreenSaver */,
 				EF5431FB2460BF440085E08F /* StarsPreview */,
@@ -178,10 +195,10 @@
 				EF5431F22460BD900085E08F /* SkySaverView.swift */,
 				EF77C9A62468640F00C0E8BB /* SkyCoordinator.swift */,
 				EF77C9AF24689F4600C0E8BB /* SkyMode.swift */,
+				EF38B23226A370D50035881D /* Transition.swift */,
 				EFA044C2248AE627007C9242 /* Sunrise Sunset */,
 				EF77C9BB246C50D600C0E8BB /* Extensions */,
 				EF77C9AC24689EA800C0E8BB /* Views */,
-				EF77C9A324671E6C00C0E8BB /* ColorHelper.swift */,
 			);
 			path = ScreenSaver;
 			sourceTree = "<group>";
@@ -233,6 +250,7 @@
 		EF77C9AC24689EA800C0E8BB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EF38B22F26A370B60035881D /* AnimatableView.swift */,
 				EF77C9AD24689EB300C0E8BB /* Night */,
 				EF77C9AE24689EBB00C0E8BB /* Day */,
 				EF77C9A024671DB300C0E8BB /* TransitionView.swift */,
@@ -262,6 +280,7 @@
 		EF77C9BB246C50D600C0E8BB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				EF77C9A324671E6C00C0E8BB /* CGColor~Sky.swift */,
 				EFA044C6248AFF50007C9242 /* Date~Helpers.swift */,
 				EF77C9A924686C4500C0E8BB /* NSView~animations.swift */,
 			);
@@ -284,6 +303,7 @@
 				EFA044BC248ADFB0007C9242 /* LocationHelper.swift */,
 				EFA044CF248D8355007C9242 /* Solar.swift */,
 				EFA044D2248D8999007C9242 /* Julian.swift */,
+				EF38B23526A374F50035881D /* Trigonometry.swift */,
 			);
 			path = "Sunrise Sunset";
 			sourceTree = "<group>";
@@ -379,7 +399,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1140;
-				LastUpgradeCheck = 1140;
+				LastUpgradeCheck = 1250;
 				ORGANIZATIONNAME = "Robert Tolar Haining";
 				TargetAttributes = {
 					EF5431E32460BD560085E08F = {
@@ -461,11 +481,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF38B23326A370D50035881D /* Transition.swift in Sources */,
 				EF77C9B024689F4600C0E8BB /* SkyMode.swift in Sources */,
 				EF5431F32460BD900085E08F /* SkySaverView.swift in Sources */,
 				EF77C99B246719CB00C0E8BB /* Cloud.swift in Sources */,
+				EF38B23026A370B60035881D /* AnimatableView.swift in Sources */,
 				EF54322E24632B020085E08F /* DayView.swift in Sources */,
-				EF77C9A424671E6C00C0E8BB /* ColorHelper.swift in Sources */,
+				EF77C9A424671E6C00C0E8BB /* CGColor~Sky.swift in Sources */,
 				EF77C9A124671DB300C0E8BB /* TransitionView.swift in Sources */,
 				EF77C9AA24686C4500C0E8BB /* NSView~animations.swift in Sources */,
 				EF5431F52460BDC60085E08F /* NightView.swift in Sources */,
@@ -477,6 +499,7 @@
 				EFA044BD248ADFB0007C9242 /* LocationHelper.swift in Sources */,
 				EFA044D0248D8355007C9242 /* Solar.swift in Sources */,
 				EFA044C4248AE6B4007C9242 /* TransitionForecaster.swift in Sources */,
+				EF38B23626A374F50035881D /* Trigonometry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -485,7 +508,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF5432292460BF500085E08F /* SkySaverView.swift in Sources */,
-				EF77C9A524671E6C00C0E8BB /* ColorHelper.swift in Sources */,
+				EF38B23126A370B60035881D /* AnimatableView.swift in Sources */,
+				EF77C9A524671E6C00C0E8BB /* CGColor~Sky.swift in Sources */,
 				EF77C99F246719E000C0E8BB /* CloudParticle.swift in Sources */,
 				EF77C9AB24686C4500C0E8BB /* NSView~animations.swift in Sources */,
 				EF54322A2460BF500085E08F /* NightView.swift in Sources */,
@@ -493,8 +517,10 @@
 				EF5431FD2460BF440085E08F /* AppDelegate.swift in Sources */,
 				EF77C9992467199300C0E8BB /* Star.swift in Sources */,
 				EFA044C5248AE6B4007C9242 /* TransitionForecaster.swift in Sources */,
+				EF38B23426A370D50035881D /* Transition.swift in Sources */,
 				EFA044D4248D8999007C9242 /* Julian.swift in Sources */,
 				EFA044BE248ADFB0007C9242 /* LocationHelper.swift in Sources */,
+				EF38B23726A374F50035881D /* Trigonometry.swift in Sources */,
 				EF77C9A224671DB300C0E8BB /* TransitionView.swift in Sources */,
 				EF77C9B124689F4600C0E8BB /* SkyMode.swift in Sources */,
 				EFA044C8248AFF50007C9242 /* Date~Helpers.swift in Sources */,
@@ -578,6 +604,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -636,6 +663,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -658,6 +686,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};

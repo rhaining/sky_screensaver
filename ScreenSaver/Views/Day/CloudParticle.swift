@@ -13,9 +13,9 @@ final class CloudParticle: CALayer {
         super.init(layer: layer)
     }
     
-    init(alpha: CGFloat) {
+    init(opacity: CGFloat) {
         super.init()
-        backgroundColor = NSColor(white: 250/255.0, alpha: alpha).cgColor
+        backgroundColor = NSColor(white: 250/255.0, alpha: opacity).cgColor
     }
     
     required init?(coder: NSCoder) {
@@ -26,5 +26,4 @@ final class CloudParticle: CALayer {
         super.layoutSublayers()
         cornerRadius = frame.size.height / 2
     }
-
 }

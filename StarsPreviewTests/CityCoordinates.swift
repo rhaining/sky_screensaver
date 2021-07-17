@@ -9,6 +9,8 @@
 import Foundation
 import CoreLocation
 
+//just for our unit tests
+
 struct CityCoordinates {
     static let nyc = CLLocationCoordinate2D(latitude: 40.733, longitude: -74)
     static let atlanta = CLLocationCoordinate2D(latitude: 33.733, longitude: -84.383)

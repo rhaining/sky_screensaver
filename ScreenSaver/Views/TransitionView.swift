@@ -8,7 +8,7 @@
 
 import AppKit
 
-protocol TransitionViewDelegate {
+protocol TransitionViewDelegate: NSObject {
     func didComplete()
 }
 
@@ -17,11 +17,15 @@ final class TransitionView: NSView {
         case sunrise, sunset
     }
     
-    var delegate: TransitionViewDelegate?
+    private struct Constants {
+        static let transitionDuration: TimeInterval = 240
+    }
     
-    let type: TransitionType
+    weak var delegate: TransitionViewDelegate?
     
-    var isComplete = false {
+    private let type: TransitionType
+    private var hasStarted = false
+    private var isComplete = false {
         didSet {
             if isComplete {
                 delegate?.didComplete()
@@ -29,20 +33,22 @@ final class TransitionView: NSView {
         }
     }
     
-    let gradientLayer = CAGradientLayer()
-    let gradientColors: [CGColor]
+    private let gradientLayer = CAGradientLayer()
+    private let gradientColors: [CGColor]
 
     init(type: TransitionType) {
         self.type = type
         
         switch type {
             case .sunrise:
-                gradientLayer.colors = [ColorHelper.nighttime, ColorHelper.nighttime]
+                gradientLayer.colors = [CGColor.nighttime, CGColor.nighttime]
+                //for sunrise, we want the colords to shift 180º
                 gradientLayer.transform = CATransform3DMakeRotation(CGFloat.pi, 0, 0, 1)
-                gradientColors = ColorHelper.sunrise
+                gradientColors = CGColor.sunrise
+                
             case .sunset:
-                gradientLayer.colors = [ColorHelper.daytime, ColorHelper.daytime]
-                gradientColors = ColorHelper.sunset
+                gradientLayer.colors = [CGColor.daytime, CGColor.daytime]
+                gradientColors = CGColor.sunset
         }
 
         super.init(frame: .zero)
@@ -60,24 +66,22 @@ final class TransitionView: NSView {
         gradientLayer.frame = bounds
     }
     
-    var hasStarted = false
-    func startTransitions() {
+    private func startTransitions() {
         guard !hasStarted else { return }
         hasStarted = true
         
         transitionToNextStop()
     }
     
-    func transitionToNextStop(colorIdx: Int = 0) {
+    //every 4 minutes, let's shift to the next pair of colors for our gradient.
+    private func transitionToNextStop(colorIdx: Int = 0) {
         guard colorIdx < gradientColors.count else {
             isComplete = true
             return
         }
         
-        let animationDuration = 240 //seconds
-        
         CATransaction.begin()
-        CATransaction.setAnimationDuration(Double(animationDuration))
+        CATransaction.setAnimationDuration(Constants.transitionDuration)
         CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: CAMediaTimingFunctionName.easeInEaseOut))
         
         let newColors: [CGColor]
@@ -99,13 +103,13 @@ final class TransitionView: NSView {
         
         CATransaction.commit()
         
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(animationDuration)) { [weak self] in
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(Int(Constants.transitionDuration))) { [weak self] in
             self?.transitionToNextStop(colorIdx: colorIdx+1)
         }
     }
 }
 
-extension TransitionView: SkyView {
+extension TransitionView: AnimatableView {
     func animateOneFrame() {
         startTransitions()
     }

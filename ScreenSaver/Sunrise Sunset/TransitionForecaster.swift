@@ -9,6 +9,8 @@
 import Foundation
 import CoreLocation
 
+// Identifies our location & forecasts our next transition.
+
 protocol TransitionForecasterDelegate {
     func shouldUpdateToCurrentSkyMode(_ skyMode: SkyMode)
     func shouldPlanForNextTransition(_ skyMode: SkyMode, at date: Date)
@@ -23,7 +25,7 @@ final class TransitionForecaster {
         getLocation()
     }
     
-    func getLocation() {
+    private func getLocation() {
         LocationHelper.shared.getLocation { [weak self] (coordinate, error) in
             if let coordinate = coordinate {
                 self?.getSolar(coordinate: coordinate)
@@ -66,7 +68,6 @@ final class TransitionForecaster {
             let tomororwsSolar = Solar(for: justAfterMidnight, coordinate: coordinate),
             let tomorrowsSunriseDate = tomororwsSolar.sunrise,
             tomorrowsSunriseDate.isInTheFuture(from: date) {
-                
                 //tomorrow sunrise is next transition time.
                 delegate?.shouldPlanForNextTransition(SkyMode.sunrise, at: tomorrowsSunriseDate)
         }

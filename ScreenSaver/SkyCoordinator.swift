@@ -8,31 +8,24 @@
 
 import AppKit
 
-protocol SkyView: NSView {
-    func animateOneFrame()
-}
+// The SkyCoordinator class manages the screen between the various views of night/day/sunrise/sunset.
 
 protocol SkyCoordinatorDelegate {
     func shouldAddSubview(_ view: NSView, below: NSView?)
 }
 
-struct Transition {
-    let skyMode: SkyMode
-    let date: Date
-}
-
-final class SkyCoordinator {
+final class SkyCoordinator: NSObject {
     
-    var skyMode: SkyMode? {
+    private var skyMode: SkyMode? {
         didSet {
             if skyMode != oldValue {
                 currentView = createCurrentView()
             }
         }
     }
-    var nextTransition: Transition?
+    private var nextTransition: Transition?
     
-    var currentView: SkyView? {
+    var currentView: AnimatableView? {
         didSet {
             if let currentView = currentView {
                 delegate?.shouldAddSubview(currentView, below: oldValue)
@@ -43,14 +36,11 @@ final class SkyCoordinator {
     
     var delegate: SkyCoordinatorDelegate?
     
-    let transitionForecaster = TransitionForecaster()
-    
-    
-    init() {
-        transitionForecaster.delegate = self
-    }
-    
+    private let transitionForecaster = TransitionForecaster()
+        
     func startAnimation() {
+        transitionForecaster.delegate = self
+        
         if skyMode == nil {
             refreshSkyMode()
         }
@@ -70,7 +60,7 @@ final class SkyCoordinator {
         transitionForecaster.start()
     }
     
-    func createCurrentView() -> SkyView? {
+    func createCurrentView() -> AnimatableView? {
         guard let skyMode = skyMode else { return nil }
         
         switch skyMode {
@@ -92,8 +82,8 @@ final class SkyCoordinator {
         }
     }
     
-    // debugging…
     func didClick() {
+        // useful for debugging
     }
 }
 
