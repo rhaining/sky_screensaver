@@ -9,3 +9,14 @@ After you clone the repo, open the `SkySaver.xcodeproj` project in Xcode. The sc
 
 ## Prerequisites
 Sky is available on macOS 10.15®+ (Big Sur® & Catalina®).
+
+## Testimonials
+-    "it matches my sky pretty closely right now"
+-    "time to hit up those investorz"
+-    "it looks pretty!"
+-    "Best cloud based screensaver I've used today"
+-    "My pig thought it was cotton candy and tried to eat my screen A++ would buy again"
+-    "Doesn't work on Linux fyi"
+
+## Feedback
+Feedback is a gift. Please reach out with any questions, comments, or concerns.
