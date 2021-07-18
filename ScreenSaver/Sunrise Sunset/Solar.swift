@@ -6,13 +6,13 @@
 //  Copyright © 2020 Robert Tolar Haining. All rights reserved.
 //
 
-
-/// adapted from the sunrise equation
-///    https://en.wikipedia.org/wiki/Sunrise_equation
-
-
 import Foundation
 import CoreLocation
+
+//
+// adapted from the sunrise equation
+//    https://en.wikipedia.org/wiki/Sunrise_equation
+//
 
 final class Solar {
     var sunrise: Date?
@@ -78,7 +78,7 @@ final class Solar {
 
 extension Solar {
     
-    /// Whether the location specified by the `latitude` and `longitude` is in daytime on `date`
+    // Whether the location specified by the `latitude` and `longitude` is in daytime on `date`
     public var isDaytime: Bool {
         guard
             let sunrise = sunrise,
@@ -97,7 +97,7 @@ extension Solar {
         return isSunriseOrLater && isBeforeSunset
     }
     
-    /// Whether the location specified by the `latitude` and `longitude` is in nighttime on `date`
+    // Whether the location specified by the `latitude` and `longitude` is in nighttime on `date`
     public var isNighttime: Bool {
         return !isDaytime
     }

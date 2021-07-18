@@ -10,7 +10,9 @@ import XCTest
 @testable import SkySaverPreview
 import CoreLocation
 
+//
 // let's see if our forecaster is calculating the next transition correctly
+//
 
 class TransitionForecasterTests: XCTestCase {
 
@@ -117,13 +119,13 @@ class TransitionForecasterTests: XCTestCase {
 }
 
 extension TransitionForecasterTests: TransitionForecasterDelegate {
-    func shouldUpdateToCurrentSkyMode(_ skyMode: SkyMode) {
+    func shouldTransition(to skyMode: SkyMode) {
         XCTAssert(skyMode == expectedCurrentSkyMode,
                   "current skyMode fail: \(skyMode) != \(expectedCurrentSkyMode!)")
         currentSkyModeExpectation.fulfill()
     }
     
-    func shouldPlanForNextTransition(_ skyMode: SkyMode, at date: Date) {
+    func shouldPlanForNextTransition(to skyMode: SkyMode, at date: Date) {
         XCTAssert(skyMode == expectedNextTransitionSkyMode,
                   "next skyMode fail: \(skyMode) != \(expectedNextTransitionSkyMode!)")
         XCTAssert(abs(date.timeIntervalSince(expectedNextTransitionDate!)) < 300,

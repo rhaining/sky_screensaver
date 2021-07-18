@@ -8,7 +8,11 @@
 
 import AppKit
 
-class PreviewViewController: NSViewController {
+//
+// This view controller allows us to preview the screensaver and simulates the animation timer.
+//
+
+final class PreviewViewController: NSViewController {
     var screensaverView: SkySaverView? = nil
     
     var timer: Timer? = nil

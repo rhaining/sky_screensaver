@@ -8,6 +8,10 @@
 
 import AppKit
 
+//
+// Represents a single star in the night sky.
+//
+
 final class Star: CALayer {
     // our star's speed will be a random tiny amount
     let starspeed: CGFloat = CGFloat.random(in: 0.1..<0.3)

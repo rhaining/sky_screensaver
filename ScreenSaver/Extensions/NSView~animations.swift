@@ -8,6 +8,10 @@
 
 import AppKit
 
+//
+// Add or remove subviews with a basic opacity animation (fade-in or fade-out).
+//
+
 extension NSView {
     
     func addSubviewWithAnimation(_ view: NSView) {

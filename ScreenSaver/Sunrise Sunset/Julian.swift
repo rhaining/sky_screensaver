@@ -8,6 +8,11 @@
 
 import Foundation
 
+//
+// The Solar class uses dates in the Julian calendar.
+// More on Julian at https://en.wikipedia.org/wiki/Julian_calendar
+//
+
 struct Julian {
     private static let julianFormatter: DateFormatter = {
         let df = DateFormatter()
@@ -15,8 +20,7 @@ struct Julian {
         return df
     }()
     
-    private static let equivalentJulianYear = 2451545.0 //Jan 1, 2000 @ 12:00
-    private static let fractionalJulianDayForLeapSeconds = 0.0//0.0008 //~1 minute or so
+    private static let equivalentJulianYear = 2451545.0 //Jan 1, 2000 @ 12:00am
     private static let secondsIn2000 = 366.0 * 24 * 60 * 60
     private static let secondsInDay = 24.0 * 60 * 60
     private static let secondsInHour = 60.0 * 60
@@ -32,7 +36,7 @@ struct Julian {
     static func daysSinceY2KNoon(for date: Date) -> Double {
         //  n is the number of days since Jan 1st, 2000 12:00.
         let jDate = julianDateNoon(from: date)
-        let n = jDate - equivalentJulianYear + fractionalJulianDayForLeapSeconds
+        let n = jDate - equivalentJulianYear
         return n
     }
 

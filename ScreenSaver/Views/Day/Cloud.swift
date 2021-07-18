@@ -8,7 +8,9 @@
 
 import AppKit
 
+//
 // `Cloud` will generate a cloud layer we can size & shift around
+//
 
 final class Cloud: CALayer {
     private struct Constants {

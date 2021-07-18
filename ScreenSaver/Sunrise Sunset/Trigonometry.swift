@@ -8,6 +8,10 @@
 
 import Foundation
 
+//
+// The math functions sin/cos/etc take radians. These are helpful conversion methods for passing in and returning angles in degrees vs radians.
+//
+
 struct Trigonometry {
     static func sinDegrees(_ degrees: Double) -> Double {
         return sin(degrees.degreesToRadians)

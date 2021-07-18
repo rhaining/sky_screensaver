@@ -8,7 +8,9 @@
 
 import Foundation
 
-// Sets the transition information.
+//
+// Sets the transition information for what the new sky mode will be & when.
+//
 
 struct Transition {
     let skyMode: SkyMode

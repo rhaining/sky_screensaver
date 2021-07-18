@@ -8,6 +8,10 @@
 
 import AppKit
 
+//
+// The transition view represents a sunset or sunrise.
+//
+
 protocol TransitionViewDelegate: NSObject {
     func didComplete()
 }
@@ -42,7 +46,7 @@ final class TransitionView: NSView {
         switch type {
             case .sunrise:
                 gradientLayer.colors = [CGColor.nighttime, CGColor.nighttime]
-                //for sunrise, we want the colords to shift 180º
+                //for sunrise, we want the colors to shift 180º
                 gradientLayer.transform = CATransform3DMakeRotation(CGFloat.pi, 0, 0, 1)
                 gradientColors = CGColor.sunrise
                 
@@ -68,6 +72,7 @@ final class TransitionView: NSView {
     
     private func startTransitions() {
         guard !hasStarted else { return }
+        
         hasStarted = true
         
         transitionToNextStop()
