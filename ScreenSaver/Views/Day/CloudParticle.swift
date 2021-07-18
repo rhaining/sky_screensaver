@@ -8,6 +8,10 @@
 
 import AppKit
 
+//
+// A single cloud 'particle', that'll combine to form a cloud.
+//
+
 final class CloudParticle: CALayer {
     override init(layer: Any) {
         super.init(layer: layer)

@@ -8,6 +8,10 @@
 
 import AppKit
 
+//
+// Our base night sky with stars.
+//
+
 final class NightView: NSView {
     private struct Constants {
         static let numberOfStars = 800

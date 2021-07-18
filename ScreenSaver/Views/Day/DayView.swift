@@ -8,6 +8,10 @@
 
 import AppKit
 
+//
+// Our base day view with clouds.
+//
+
 final class DayView: NSView {
     private struct Constants {
         static let numberOfClouds = 25

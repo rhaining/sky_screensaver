@@ -8,7 +8,9 @@
 
 import AppKit
 
+//
 // The SkyCoordinator class manages the screen between the various views of night/day/sunrise/sunset.
+//
 
 protocol SkyCoordinatorDelegate {
     func shouldAddSubview(_ view: NSView, below: NSView?)
@@ -88,16 +90,16 @@ final class SkyCoordinator: NSObject {
 }
 
 extension SkyCoordinator: TransitionForecasterDelegate {
-    func shouldUpdateToCurrentSkyMode(_ skyMode: SkyMode) {
+    func shouldTransition(to skyMode: SkyMode) {
         self.skyMode = skyMode
     }
     
-    func shouldPlanForNextTransition(_ skyMode: SkyMode, at date: Date) {
+    func shouldPlanForNextTransition(to skyMode: SkyMode, at date: Date) {
         self.nextTransition = Transition(skyMode: skyMode, date: date)
     }
     
     func didFail(error: Error?) {
-        //todo: handle fail.
+        NSLog("SkyCoordinator failed: \(String(describing: error))")
     }
 }
 

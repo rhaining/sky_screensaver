@@ -8,6 +8,10 @@
 
 import Foundation
 
+//
+// Convenience methods for relative dates.
+//
+
 public extension Date {
     func wasRecent(from date: Date = Date()) -> Bool {
         return self.timeIntervalSince(date) >= -3600

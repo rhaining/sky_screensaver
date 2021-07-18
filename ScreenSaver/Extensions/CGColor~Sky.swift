@@ -8,6 +8,10 @@
 
 import AppKit
 
+//
+// Convenience methods for preset sky colors.
+//
+
 extension CGColor {
     static let daytime = NSColor(red: 164/255.0, green: 221/255.0, blue: 250/255.0, alpha: 1).cgColor
     static let nighttime = NSColor(red: 19/255.0, green: 24/255.0, blue: 98/255.0, alpha: 1).cgColor

@@ -9,7 +9,11 @@
 import Foundation
 import ScreenSaver
 
-final class SkySaverView: ScreenSaverView{
+//
+// Our primary screensaver class. This is what macOS will instantiate to start our screensaver.
+//
+
+final class SkySaverView: ScreenSaverView {
     private let skyCoordinator = SkyCoordinator()
 
     override init?(frame: CGRect, isPreview: Bool) {

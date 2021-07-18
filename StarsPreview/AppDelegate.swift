@@ -8,6 +8,10 @@
 
 import Cocoa
 
+//
+// This is the app delegate for our preview shell app that will display the screensaver in a window.
+//
+
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     

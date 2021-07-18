@@ -9,6 +9,10 @@
 import Foundation
 import CoreLocation
 
+//
+// Wrapper for Core Location 
+//
+
 final class LocationHelper: NSObject {
     private let locationManager = CLLocationManager()
     
@@ -22,9 +26,9 @@ final class LocationHelper: NSObject {
         return locationHelper
     }()
     
-    fileprivate var onUpdate: ((CLLocationCoordinate2D?, Error?) -> Void)?
+    fileprivate var onUpdate: ((Swift.Result<CLLocationCoordinate2D, Error>) -> Void)?
     
-    func getLocation(onUpdate: @escaping ((CLLocationCoordinate2D?, Error?) -> Void)) {
+    func getLocation(onUpdate: @escaping ((Swift.Result<CLLocationCoordinate2D, Error>) -> Void)) {
         self.onUpdate = onUpdate
         locationManager.requestLocation()
     }
@@ -32,12 +36,12 @@ final class LocationHelper: NSObject {
 
 extension LocationHelper: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        NSLog("locations: \(locations)")
-        onUpdate?(locations.first?.coordinate, nil)
+        guard let coordinate = locations.first?.coordinate else { return }
+        
+        onUpdate?(.success(coordinate))
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        NSLog("error: \(error)")
-        onUpdate?(nil, error)
+        onUpdate?(.failure(error))
     }
 }

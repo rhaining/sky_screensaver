@@ -9,11 +9,13 @@
 import Foundation
 import CoreLocation
 
+//
 // Identifies our location & forecasts our next transition.
+//
 
 protocol TransitionForecasterDelegate {
-    func shouldUpdateToCurrentSkyMode(_ skyMode: SkyMode)
-    func shouldPlanForNextTransition(_ skyMode: SkyMode, at date: Date)
+    func shouldTransition(to skyMode: SkyMode)
+    func shouldPlanForNextTransition(to skyMode: SkyMode, at date: Date)
     func didFail(error: Error?)
 }
 
@@ -26,12 +28,20 @@ final class TransitionForecaster {
     }
     
     private func getLocation() {
-        LocationHelper.shared.getLocation { [weak self] (coordinate, error) in
-            if let coordinate = coordinate {
-                self?.getSolar(coordinate: coordinate)
-            } else {
-                self?.delegate?.didFail(error: error)
+        LocationHelper.shared.getLocation { [weak self] (result) in
+            switch result {
+                case .success(let coordinate):
+                    self?.getSolar(coordinate: coordinate)
+
+                case .failure(let error):
+                    self?.delegate?.didFail(error: error)
+
             }
+//            if let coordinate = coordinate {
+//                self?.getSolar(coordinate: coordinate)
+//            } else {
+//                self?.delegate?.didFail(error: error)
+//            }
         }
     }
     
@@ -50,14 +60,14 @@ final class TransitionForecaster {
         var currentSkyMode: SkyMode = solar.isDaytime ? .day : .night
 
         if sunriseDate.isInTheFuture(from: date) {
-            delegate?.shouldPlanForNextTransition(SkyMode.sunrise, at: sunriseDate)
+            delegate?.shouldPlanForNextTransition(to: SkyMode.sunrise, at: sunriseDate)
         } else if sunriseDate.wasRecent(from: date) {
             currentSkyMode = .sunrise
         }
 
         if sunriseDate.isPast(from: date) && !sunriseDate.wasRecent(from: date) {
             if sunsetDate.isInTheFuture(from: date) {
-                delegate?.shouldPlanForNextTransition(SkyMode.sunset, at: sunsetDate)
+                delegate?.shouldPlanForNextTransition(to: SkyMode.sunset, at: sunsetDate)
             } else if sunsetDate.wasRecent(from: date) {
                 currentSkyMode = .sunset
             }
@@ -69,10 +79,10 @@ final class TransitionForecaster {
             let tomorrowsSunriseDate = tomororwsSolar.sunrise,
             tomorrowsSunriseDate.isInTheFuture(from: date) {
                 //tomorrow sunrise is next transition time.
-                delegate?.shouldPlanForNextTransition(SkyMode.sunrise, at: tomorrowsSunriseDate)
+                delegate?.shouldPlanForNextTransition(to: SkyMode.sunrise, at: tomorrowsSunriseDate)
         }
         
-        delegate?.shouldUpdateToCurrentSkyMode(currentSkyMode)
+        delegate?.shouldTransition(to: currentSkyMode)
     }
 }
 

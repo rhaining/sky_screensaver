@@ -10,8 +10,10 @@ import XCTest
 @testable import SkySaverPreview
 import CoreLocation
 
+//
 // let's see if our algorithm is calculating the appropriate sunrise/sunset
 // for these cities.
+//
 
 class SolarTests: XCTestCase {
     
